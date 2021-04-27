@@ -1,0 +1,40 @@
+---
+R1: 
+    hostname: 192.168.15.201
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+
+R2: 
+    hostname: 192.168.15.202
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+
+R3: 
+    hostname: 192.168.15.203
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+
+R4: 
+    hostname: 192.168.15.204
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+
+R5: 
+    hostname: 192.168.15.205
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
