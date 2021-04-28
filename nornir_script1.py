@@ -1,14 +1,18 @@
+"""
+Gather Specific Facts about the Network
+"""
+
 from nornir import InitNornir
 from nornir_utils.plugins.functions import print_result
 from nornir_napalm.plugins.tasks import napalm_get
 
-nr = InitNornir(
+NR = InitNornir(
         config_file="config.yaml", dry_run=True
 )
 
-results = nr.run(
+RESULTS = NR.run(
         task=napalm_get, getters=["facts", "interfaces", "arp_table"]
 
 )
 
-print_result(results)
+print_result(RESULTS)
