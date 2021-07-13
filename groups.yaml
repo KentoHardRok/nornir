@@ -1,4 +1,17 @@
 ---
 
 cisco_group:
+    groups:
+        - area1
+        - area2
     platform: 'ios'
+
+area1:
+    data:
+        domain: py.local
+        asn: 1
+
+area2:
+    data: 
+        domain: py.local
+        asn: 2
