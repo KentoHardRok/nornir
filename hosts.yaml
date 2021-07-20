@@ -70,3 +70,39 @@ R8:
     groups: 
         - cisco_group
         - area2
+
+R11: 
+    hostname: 192.168.100.111
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - green
+
+R12: 
+    hostname: 192.168.100.112
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - red
+
+R13: 
+    hostname: 192.168.100.113
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - blue
+
+R14: 
+    hostname: 192.168.100.114
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - blue

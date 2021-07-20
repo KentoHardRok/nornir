@@ -4,6 +4,9 @@ cisco_group:
     groups:
         - area1
         - area2
+        - green
+        - red
+        - blue
     platform: 'ios'
 
 area1:
@@ -15,3 +18,18 @@ area2:
     data: 
         domain: py.local
         asn: 2
+
+red:
+    data:
+        domain: py.red
+        asn: 3
+
+green:
+    data:
+        domain: py.green
+        asn: 4
+
+blue:
+    data:
+        domain: py.blue
+        asn: 5
