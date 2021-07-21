@@ -11,25 +11,30 @@ cisco_group:
 
 area1:
     data:
+        provider: true
         domain: py.local
-        asn: 1
+        asn: 65001
 
 area2:
     data: 
+        provider: true
         domain: py.local
-        asn: 2
+        asn: 65001
 
 red:
     data:
+        provider: false
         domain: py.red
-        asn: 3
+        asn: 65003
 
 green:
     data:
+        provider: false
         domain: py.green
-        asn: 4
+        asn: 65004
 
 blue:
     data:
+        provider: false
         domain: py.blue
-        asn: 5
+        asn: 65002

@@ -1182,3 +1182,778 @@ Authentication failed.
 
 2021-07-17 05:49:07,688 -  nornir.core -  WARNING -        run() - Task 'netmiko_send_config' has not been run – 0 hosts selected
 2021-07-17 05:49:31,453 -  nornir.core -  WARNING -        run() - Task 'netmiko_send_config' has not been run – 0 hosts selected
+2021-07-20 17:07:07,017 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'csend_command': ['sho ver']} on 4 hosts
+2021-07-20 17:07:07,018 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2021-07-20 17:07:07,018 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2021-07-20 17:07:07,018 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2021-07-20 17:07:07,019 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2021-07-20 17:07:30,294 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'send_command': ['sho ver']} on 4 hosts
+2021-07-20 17:07:30,295 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2021-07-20 17:07:30,296 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2021-07-20 17:07:30,296 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2021-07-20 17:07:30,296 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2021-07-20 17:09:13,497 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': ['sho ver']} on 4 hosts
+2021-07-20 17:09:18,515 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.100.101:22
+
+
+
+2021-07-20 17:09:18,515 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.100.103:22
+
+
+
+2021-07-20 17:09:18,515 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.100.102:22
+
+
+
+2021-07-20 17:09:18,516 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.100.104:22
+
+
+
+2021-07-20 17:13:13,462 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': ['sho ver']} on 4 hosts
+2021-07-20 17:13:14,035 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:13:14,035 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:13:14,044 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:13:14,047 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:14:36,302 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces', 'arp_table']} on 12 hosts
+2021-07-20 17:14:39,071 - nornir.core.task -    ERROR -      start() - Host 'R14': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 435, in connect
+    self._auth(
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.100.114:22
+
+
+Authentication failed.
+
+2021-07-20 17:19:11,620 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': ['sho ver']} on 4 hosts
+2021-07-20 17:19:12,123 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:19:12,172 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:19:12,193 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:19:12,238 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:20:00,717 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 12 hosts
+2021-07-20 17:20:03,366 - nornir.core.task -    ERROR -      start() - Host 'R14': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 435, in connect
+    self._auth(
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.100.114:22
+
+
+Authentication failed.
+
+2021-07-20 17:21:02,084 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': ['sho ver']} on 4 hosts
+2021-07-20 17:21:02,537 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:21:02,628 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:21:02,734 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:21:02,799 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:22:04,719 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': ['sho ver']} on 4 hosts
+2021-07-20 17:22:05,245 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:22:05,251 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:22:05,261 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:22:05,281 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:22:19,837 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ver'} on 4 hosts
+2021-07-20 17:23:25,422 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ver'} on 1 hosts
+2021-07-20 17:24:25,842 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ver'} on 1 hosts
+2021-07-20 17:24:53,546 -  nornir.core -  WARNING -        run() - Task 'netmiko_send_command' has not been run – 0 hosts selected
+2021-07-20 17:25:43,121 -  nornir.core -  WARNING -        run() - Task 'netmiko_send_command' has not been run – 0 hosts selected
+2021-07-20 17:26:08,948 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ver'} on 4 hosts
+2021-07-20 17:26:58,319 -  nornir.core -  WARNING -        run() - Task 'netmiko_send_command' has not been run – 0 hosts selected
+2021-07-20 17:27:17,097 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ver'} on 4 hosts
+2021-07-20 17:29:26,349 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ver'} on 4 hosts
+2021-07-20 17:39:53,576 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ver'} on 4 hosts
+2021-07-20 17:42:08,545 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': ['sho ip int br', 'sho route']} on 4 hosts
+2021-07-20 17:42:09,002 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:42:09,062 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:42:09,115 - nornir.core.task -    ERROR -      start() - Host 'R8': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:42:09,135 - nornir.core.task -    ERROR -      start() - Host 'R7': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1485, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 1644, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-07-20 17:46:38,423 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 17:46:39,076 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho route'} on 4 hosts
+2021-07-20 17:47:20,423 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho route'} on 4 hosts
+2021-07-20 17:47:21,125 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 17:47:31,024 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip route'} on 4 hosts
+2021-07-20 17:47:31,696 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 17:48:48,495 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 17:48:49,151 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip route'} on 4 hosts
+2021-07-20 17:51:57,808 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 17:51:58,555 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip route'} on 4 hosts
+2021-07-20 17:52:52,640 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 17:52:53,353 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip route'} on 4 hosts
+2021-07-20 17:53:41,973 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 17:53:42,688 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip route'} on 4 hosts
+2021-07-20 17:54:54,864 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho run'} on 4 hosts
+2021-07-20 17:54:57,239 - nornir.core.task -    ERROR -      start() - Host 'R14': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 435, in connect
+    self._auth(
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.100.114:22
+
+
+Authentication failed.
+
+2021-07-20 17:54:57,239 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 17:54:57,329 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip route'} on 4 hosts
+2021-07-20 17:55:58,843 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 17:56:01,243 - nornir.core.task -    ERROR -      start() - Host 'R14': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 435, in connect
+    self._auth(
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/tomw/.local/lib/python3.8/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/tomw/.local/lib/python3.8/site-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.100.114:22
+
+
+Authentication failed.
+
+2021-07-20 17:56:01,244 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip route'} on 4 hosts
+2021-07-20 17:57:21,319 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 17:57:22,031 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip route'} on 4 hosts
+2021-07-20 18:04:02,098 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces', 'arp_table']} on 4 hosts
+2021-07-20 18:06:47,906 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 12 hosts
+2021-07-20 18:07:02,289 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho run'} on 12 hosts
+2021-07-20 18:07:03,464 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': ' sho ip int br'} on 12 hosts
+2021-07-20 18:09:00,341 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 18:09:01,075 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip route'} on 4 hosts
+2021-07-20 18:09:21,762 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 18:09:22,450 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip route'} on 4 hosts
+2021-07-20 18:09:36,558 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip int br'} on 4 hosts
+2021-07-20 18:09:37,319 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sho ip route'} on 4 hosts
+2021-07-20 18:21:32,290 -  nornir.core -  WARNING -        run() - Task 'napalm_get' has not been run – 0 hosts selected
+2021-07-20 18:21:42,857 -  nornir.core -  WARNING -        run() - Task 'napalm_get' has not been run – 0 hosts selected
+2021-07-20 18:22:37,691 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces'} on 2 hosts
+2021-07-20 18:23:48,709 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces'} on 2 hosts
