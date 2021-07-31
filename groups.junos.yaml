@@ -1,0 +1,17 @@
+---
+
+junos_group:
+    groups:
+        - evpn_spine
+        - evpn_leaf
+    platform: 'junos'
+
+evpn_spine:
+    data:
+        domain: py.local
+        asn: 65001
+
+evpn_leaf:
+    data: 
+        domain: py.local
+        asn: 65001

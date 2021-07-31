@@ -1,0 +1,79 @@
+---
+SP1: 
+    hostname: 192.168.100.101
+    platform: 'junos'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - junos_group
+        - evpn_spine
+    data:
+        router_type: spine
+        igp: ospf
+        egp: bgp
+        route_reflector: True 
+
+SP2: 
+    hostname: 192.168.100.102
+    platform: 'junos'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - junos_group
+        - evpn_spine
+    data:
+        router_type: spine
+        igp: ospf
+        egp: bgp
+
+LF1: 
+    hostname: 192.168.100.111
+    platform: 'junos'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - junos_group
+        - evpn_leaf
+    data:
+        router_type: leaf
+        igp: ospf
+        egp: bgp
+
+LF2: 
+    hostname: 192.168.100.112
+    platform: 'junos'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - junos_group
+        - evpn_leaf
+    data:
+        router_type: leaf
+        igp: ospf
+        egp: bgp
+
+LF3: 
+    hostname: 192.168.100.113
+    platform: 'junos'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - junos_group
+        - evpn_leaf
+    data:
+        router_type: leaf
+        igp: ospf
+        egp: bgp
+
+LF4: 
+    hostname: 192.168.100.114
+    platform: 'junos'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - junos_group
+        - evpn_leaf
+    data:
+        router_type: leaf
+        igp: ospf
+        egp: bgp

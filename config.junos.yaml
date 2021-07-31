@@ -1,0 +1,11 @@
+---
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: "/home/tomw/nornir/hosts.junos.yaml"
+        group_file: "/home/tomw/nornir/groups.junos.yaml"
+        defaults_file: "home/tomw/nornir/defaults/yaml"
+runner:
+    plugin: threaded
+    options:
+        num_workers: 100

@@ -2610,3 +2610,44 @@ Device settings: cisco_ios 192.168.100.114:22
 
 
 2021-07-28 14:08:23,256 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'wr'} on 4 hosts
+2021-07-31 02:05:30,659 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'get_mac_address_table'} on 4 hosts
+2021-07-31 02:05:49,553 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-07-31 02:06:17,535 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac-address-table'} on 4 hosts
+2021-07-31 02:06:17,968 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_mac-address-table'
+
+2021-07-31 02:06:18,018 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_mac-address-table'
+
+2021-07-31 02:06:18,029 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_mac-address-table'
+
+2021-07-31 02:06:18,142 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_mac-address-table'
+
+2021-07-31 02:06:40,357 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-07-31 02:07:01,290 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 12 hosts
+2021-07-31 02:07:50,720 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
+2021-07-31 02:15:34,144 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 12 hosts
+2021-07-31 04:23:55,772 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 6 hosts
+2021-07-31 04:24:28,175 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 6 hosts
