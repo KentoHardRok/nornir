@@ -21,7 +21,7 @@ mac_df = []
 for i in range(0, dev_num):
     print("*******************  " + dev[i] + "  ************************")
     mac_df.append(pd.DataFrame(mac_address[dev[i]][0].result['mac_address_table']))
-    print(mac_df)
+    print(pd.concat(mac_df))
     
 # total_mac_list = pd.concat(mac_df)
 # print(total_mac_list)
