@@ -15,20 +15,25 @@ leaf = nr.filter(F(groups__contains="evpn_leaf"))
 mac_address = leaf.run(
     task=napalm_get, getters="mac_address_table"
     )
-
+ 
 # This finds the num of devices on the net and get's their names
 dev_num = len(mac_address.keys())
 dev, value = zip(*mac_address.items())
+total_mac_list = []
+mac_df = []
 
 # This loop just displays the mac-address-table per device (and makes an aggr list)
 for i in range(0, dev_num):
-    mac_df = []
     print("*******************  " + dev[i] + "  ************************")
-    mac_df.append(pd.DataFrame(mac_address[dev[i]][0].result['mac_address_table']))
-    total_mac_list.append(mac_df)
-    print(pd.concat(mac_df))
+    mac_table = pd.DataFrame(mac_address[dev[i]][0].result['mac_address_table'])
+    mac_table.insert(loc=0, column='device', value=dev[i])
+    mac_df.append(mac_table)
+    total_mac_list = pd.concat(mac_df)
+    print(mac_table)
     
-# Below just prints the aggregated list of all of the unique mac-addresses
-total_mac_list = pd.concat(total_mac_list)
-print(total_mac_list.drop_duplicates(subset=['mac']))
+# Below just prints the aggregated list of all of the unique mac-addressestotal_mac_list = pd.concat(pd.DAtotal_mac_list)
+print("\n\n*******************  All Macs  ************************")
+result = total_mac_list.sort_values(by=['device'])
+print(result)
+result.to_csv(r'/tmp/unique_mac.csv', index = False)
 

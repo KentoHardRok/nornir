@@ -3208,3 +3208,337 @@ AttributeError: 'IOSDriver' object has no attribute 'get_ip_address_table'
 2021-08-03 16:53:07,280 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
 2021-08-03 16:53:21,474 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
 2021-08-03 16:53:34,460 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
+2021-08-03 17:07:33,300 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:07:36,379 - nornir.core.task -    ERROR -      start() - Host 'LF4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1347, in open
+    self._conn = netconf_ssh.connect(
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 168, in connect
+    return connect_ssh(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 135, in connect_ssh
+    session.connect(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/transport/ssh.py", line 291, in connect
+    raise SSHError("Could not open socket to %s:%s" % (host, port))
+ncclient.transport.errors.SSHError: Could not open socket to 192.168.100.114:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 140, in open
+    self.device.open(auto_probe=self.auto_probe)
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1385, in open
+    raise EzErrors.ConnectTimeoutError(self)
+jnpr.junos.exception.ConnectTimeoutError: ConnectTimeoutError(192.168.100.114)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 142, in open
+    raise ConnectionException(cte.msg) from cte
+napalm.base.exceptions.ConnectionException: None
+
+2021-08-03 17:07:36,380 - nornir.core.task -    ERROR -      start() - Host 'LF1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1347, in open
+    self._conn = netconf_ssh.connect(
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 168, in connect
+    return connect_ssh(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 135, in connect_ssh
+    session.connect(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/transport/ssh.py", line 291, in connect
+    raise SSHError("Could not open socket to %s:%s" % (host, port))
+ncclient.transport.errors.SSHError: Could not open socket to 192.168.100.111:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 140, in open
+    self.device.open(auto_probe=self.auto_probe)
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1385, in open
+    raise EzErrors.ConnectTimeoutError(self)
+jnpr.junos.exception.ConnectTimeoutError: ConnectTimeoutError(192.168.100.111)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 142, in open
+    raise ConnectionException(cte.msg) from cte
+napalm.base.exceptions.ConnectionException: None
+
+2021-08-03 17:07:43,446 - nornir.core.task -    ERROR -      start() - Host 'LF3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1347, in open
+    self._conn = netconf_ssh.connect(
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 168, in connect
+    return connect_ssh(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 135, in connect_ssh
+    session.connect(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/transport/ssh.py", line 291, in connect
+    raise SSHError("Could not open socket to %s:%s" % (host, port))
+ncclient.transport.errors.SSHError: Could not open socket to 192.168.100.113:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 140, in open
+    self.device.open(auto_probe=self.auto_probe)
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1385, in open
+    raise EzErrors.ConnectTimeoutError(self)
+jnpr.junos.exception.ConnectTimeoutError: ConnectTimeoutError(192.168.100.113)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 142, in open
+    raise ConnectionException(cte.msg) from cte
+napalm.base.exceptions.ConnectionException: None
+
+2021-08-03 17:07:43,447 - nornir.core.task -    ERROR -      start() - Host 'LF2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1347, in open
+    self._conn = netconf_ssh.connect(
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 168, in connect
+    return connect_ssh(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 135, in connect_ssh
+    session.connect(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/transport/ssh.py", line 291, in connect
+    raise SSHError("Could not open socket to %s:%s" % (host, port))
+ncclient.transport.errors.SSHError: Could not open socket to 192.168.100.112:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 140, in open
+    self.device.open(auto_probe=self.auto_probe)
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1385, in open
+    raise EzErrors.ConnectTimeoutError(self)
+jnpr.junos.exception.ConnectTimeoutError: ConnectTimeoutError(192.168.100.112)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 142, in open
+    raise ConnectionException(cte.msg) from cte
+napalm.base.exceptions.ConnectionException: None
+
+2021-08-03 17:09:25,243 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 6 hosts
+2021-08-03 17:09:28,311 - nornir.core.task -    ERROR -      start() - Host 'SP1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1347, in open
+    self._conn = netconf_ssh.connect(
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 168, in connect
+    return connect_ssh(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 135, in connect_ssh
+    session.connect(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/transport/ssh.py", line 291, in connect
+    raise SSHError("Could not open socket to %s:%s" % (host, port))
+ncclient.transport.errors.SSHError: Could not open socket to 192.168.100.101:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 140, in open
+    self.device.open(auto_probe=self.auto_probe)
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1385, in open
+    raise EzErrors.ConnectTimeoutError(self)
+jnpr.junos.exception.ConnectTimeoutError: ConnectTimeoutError(192.168.100.101)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 142, in open
+    raise ConnectionException(cte.msg) from cte
+napalm.base.exceptions.ConnectionException: None
+
+2021-08-03 17:09:28,312 - nornir.core.task -    ERROR -      start() - Host 'LF1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1347, in open
+    self._conn = netconf_ssh.connect(
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 168, in connect
+    return connect_ssh(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 135, in connect_ssh
+    session.connect(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/transport/ssh.py", line 291, in connect
+    raise SSHError("Could not open socket to %s:%s" % (host, port))
+ncclient.transport.errors.SSHError: Could not open socket to 192.168.100.111:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 140, in open
+    self.device.open(auto_probe=self.auto_probe)
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1385, in open
+    raise EzErrors.ConnectTimeoutError(self)
+jnpr.junos.exception.ConnectTimeoutError: ConnectTimeoutError(192.168.100.111)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 142, in open
+    raise ConnectionException(cte.msg) from cte
+napalm.base.exceptions.ConnectionException: None
+
+2021-08-03 17:09:35,574 - nornir.core.task -    ERROR -      start() - Host 'SP2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1347, in open
+    self._conn = netconf_ssh.connect(
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 168, in connect
+    return connect_ssh(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 135, in connect_ssh
+    session.connect(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/transport/ssh.py", line 291, in connect
+    raise SSHError("Could not open socket to %s:%s" % (host, port))
+ncclient.transport.errors.SSHError: Could not open socket to 192.168.100.102:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 140, in open
+    self.device.open(auto_probe=self.auto_probe)
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1385, in open
+    raise EzErrors.ConnectTimeoutError(self)
+jnpr.junos.exception.ConnectTimeoutError: ConnectTimeoutError(192.168.100.102)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 142, in open
+    raise ConnectionException(cte.msg) from cte
+napalm.base.exceptions.ConnectionException: None
+
+2021-08-03 17:09:35,575 - nornir.core.task -    ERROR -      start() - Host 'LF3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1347, in open
+    self._conn = netconf_ssh.connect(
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 168, in connect
+    return connect_ssh(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/manager.py", line 135, in connect_ssh
+    session.connect(*args, **kwds)
+  File "/home/tomw/.local/lib/python3.8/site-packages/ncclient/transport/ssh.py", line 291, in connect
+    raise SSHError("Could not open socket to %s:%s" % (host, port))
+ncclient.transport.errors.SSHError: Could not open socket to 192.168.100.113:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 140, in open
+    self.device.open(auto_probe=self.auto_probe)
+  File "/home/tomw/.local/lib/python3.8/site-packages/jnpr/junos/device.py", line 1385, in open
+    raise EzErrors.ConnectTimeoutError(self)
+jnpr.junos.exception.ConnectTimeoutError: ConnectTimeoutError(192.168.100.113)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/tomw/.local/lib/python3.8/site-packages/napalm/junos/junos.py", line 142, in open
+    raise ConnectionException(cte.msg) from cte
+napalm.base.exceptions.ConnectionException: None
+
+2021-08-03 17:22:48,294 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:25:18,165 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:28:55,029 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:32:30,610 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:33:24,375 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:35:34,869 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:37:20,399 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:44:36,529 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:45:51,521 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:46:18,270 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:46:32,302 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:47:26,790 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:49:45,956 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:52:49,684 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:53:33,898 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:57:57,538 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:58:38,960 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 17:59:12,327 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 18:02:48,735 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 18:05:28,653 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 18:10:09,460 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 18:10:44,028 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 18:11:06,327 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 18:12:22,463 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 18:15:30,916 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 18:16:18,484 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 18:18:10,133 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 18:21:55,222 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
