@@ -3068,3 +3068,143 @@ Traceback (most recent call last):
     raise ConnectionException(cte.msg) from cte
 napalm.base.exceptions.ConnectionException: None
 
+2021-08-03 16:40:20,912 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interface_ip'} on 12 hosts
+2021-08-03 16:40:21,598 - nornir.core.task -    ERROR -      start() - Host 'R5': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_interface_ip'
+
+2021-08-03 16:40:21,659 - nornir.core.task -    ERROR -      start() - Host 'R13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_interface_ip'
+
+2021-08-03 16:40:21,669 - nornir.core.task -    ERROR -      start() - Host 'R6': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_interface_ip'
+
+2021-08-03 16:40:21,731 - nornir.core.task -    ERROR -      start() - Host 'R11': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_interface_ip'
+
+2021-08-03 16:40:21,754 - nornir.core.task -    ERROR -      start() - Host 'R8': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_interface_ip'
+
+2021-08-03 16:40:21,774 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_interface_ip'
+
+2021-08-03 16:40:21,790 - nornir.core.task -    ERROR -      start() - Host 'R7': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_interface_ip'
+
+2021-08-03 16:40:21,802 - nornir.core.task -    ERROR -      start() - Host 'R12': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_interface_ip'
+
+2021-08-03 16:40:21,806 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_interface_ip'
+
+2021-08-03 16:40:21,811 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_interface_ip'
+
+2021-08-03 16:40:21,813 - nornir.core.task -    ERROR -      start() - Host 'R14': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_interface_ip'
+
+2021-08-03 16:40:21,821 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_interface_ip'
+
+2021-08-03 16:40:46,237 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
+2021-08-03 16:45:40,220 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'ip_address_table'} on 4 hosts
+2021-08-03 16:45:40,698 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_ip_address_table'
+
+2021-08-03 16:45:40,722 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_ip_address_table'
+
+2021-08-03 16:45:40,764 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_ip_address_table'
+
+2021-08-03 16:45:40,776 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/tomw/.local/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_ip_address_table'
+
+2021-08-03 16:46:37,028 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
+2021-08-03 16:48:14,064 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
+2021-08-03 16:49:32,540 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
+2021-08-03 16:50:44,648 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 4 hosts
+2021-08-03 16:52:15,948 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
+2021-08-03 16:52:59,218 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
+2021-08-03 16:53:07,280 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
+2021-08-03 16:53:21,474 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
+2021-08-03 16:53:34,460 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'interfaces_ip'} on 12 hosts
