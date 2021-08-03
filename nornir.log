@@ -3542,3 +3542,4 @@ napalm.base.exceptions.ConnectionException: None
 2021-08-03 18:16:18,484 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
 2021-08-03 18:18:10,133 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
 2021-08-03 18:21:55,222 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts
+2021-08-03 18:29:07,950 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'mac_address_table'} on 4 hosts

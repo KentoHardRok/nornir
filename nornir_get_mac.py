@@ -26,6 +26,7 @@ mac_df = []
 for i in range(0, dev_num):
     print("*******************  " + dev[i] + "  ************************")
     mac_table = pd.DataFrame(mac_address[dev[i]][0].result['mac_address_table'])
+    # added a column to track which device these macs are learned from
     mac_table.insert(loc=0, column='device', value=dev[i])
     mac_df.append(mac_table)
     total_mac_list = pd.concat(mac_df)
@@ -35,5 +36,5 @@ for i in range(0, dev_num):
 print("\n\n*******************  All Macs  ************************")
 result = total_mac_list.sort_values(by=['device'])
 print(result)
-result.to_csv(r'/tmp/unique_mac.csv', index = False)
+result.to_csv(r'/tmp/all_mac_table.csv', index = False)
 
