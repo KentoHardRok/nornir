@@ -1,27 +1,49 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-
-from nornir import InitNornir
-from nornir_utils.plugins.functions import print_result
 from nornir_netmiko.tasks import netmiko_send_command, netmiko_send_config
+from nornir_utils.plugins.functions import print_result
+from nornir import InitNornir
 from nornir.core.filter import F
 
-nr = InitNornir(config_file="config.yaml")
-#provider = nr.filter(F(groups__contains="blue"))
-#provider = nr.filter(F(groups__contains="green"))
-#provider = nr.filter(F(groups__contains="red"))
-#provider = nr.filter(F(groups__contains="area2"))
-#provider = nr.filter(F(groups__contains="area2") | F(groups__contains="area1"))
-#provider_ce_only = provider.filter(router_type="pe")
-#ce_not_R1 = provider_ce_only.filter(~F(hostname="192.168.100.101"))
 
-provider = nr.filter(F(router_type="ce"))
-commands=["wr"]
+def get_int_status(devs):
+    """
+    Runs a list of commands and stores the results
+    as class attributes named after the command
+    """
+    commands = ["sho ip int br"]
+    for cmd in commands:
+        get = devs.run(task=netmiko_send_command,
+                       command_string=cmd,
+                       use_textfsm=True)
+        devs.host[cmd] = get.result
 
-for cmd in commands:
-    results = provider.run(
-        task=netmiko_send_command,
-        command_string=cmd
-        )
-    print_result(results)
+
+def run_on_ports(info):
+    """
+    Send ractive commands to devices
+    """
+    commands = ["description Unused Ports"]
+    for key, devs in info.inventory.hosts.items():
+        for interf in devs['sho ip int br']:
+            if "administratively down" in interf['status']:
+                for cmd in commands:
+                    info.run(
+                        task=netmiko_send_config,
+                        config_commands=['interface ' + interf['intf'], cmd])
+
+
+def main() -> None:
+    """
+    main body
+    """
+    nr = InitNornir(config_file="config.yaml")
+    pe = nr.filter(F(router_type="pe"))
+    result = pe.run(task=get_int_status)
+    print_result(result)
+    run_on_ports(pe)
+
+
+if __name__ == '__main__':
+    main()
