@@ -24,7 +24,7 @@ def run_on_ports(info):
     """
     Send ractive commands to devices
     """
-    commands = ["description Unused Ports"]
+    commands = ["description Unused Ports", "do wr"]
     for key, devs in info.inventory.hosts.items():
         for interf in devs['sho ip int br']:
             if "administratively down" in interf['status']:
