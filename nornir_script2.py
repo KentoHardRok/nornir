@@ -15,11 +15,9 @@ commands = input("\nEnter Commands: ")
 cmds = commands.split(",")
 
 for cmd in cmds:
-    nr = InitNornir()
+    nr = InitNornir(config="config.mv.yaml")
+    cisco = nr.filter(F(groups__contains="cisco_group"))
 
-    result = nr.run(
-        task=netmiko_send_command,
-        command_string=cmd
-        )
+    result = nr.run(task=netmiko_send_command, command_string=cmd)
 
     print_result(result)

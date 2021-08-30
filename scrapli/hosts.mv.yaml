@@ -1,0 +1,96 @@
+---
+CSR5:
+    hostname: 192.168.100.105
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups:
+        - cisco_group
+    data:
+        router_type: csr
+        igp: ospf
+        egp: bgp
+
+CSR6:
+    hostname: 192.168.100.106
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups:
+        - cisco_group
+    data:
+        router_type: csr
+        igp: ospf
+        egp: bgp
+
+CSR7:
+    hostname: 192.168.100.107
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups:
+        - cisco_group
+    data:
+        router_type: csr
+        igp: ospf
+        egp: bgp
+
+CSR8:
+    hostname: 192.168.100.108
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups:
+        - cisco_group
+    data:
+        router_type: csr
+        igp: ospf
+        egp: bgp
+
+cumulus15:
+    hostname: 192.168.100.115
+    platform: 'linux'
+    username: cumulus
+    password: mR7h0M@$
+    groups:
+        - cumulus_group
+    data:
+        router_type: cumulus
+        igp: ospf
+        egp: bgp
+
+cumulus16:
+    hostname: 192.168.100.116
+    platform: 'linux'
+    username: cumulus
+    password: mR7h0M@$
+    groups:
+        - cumulus_group
+    data:
+        router_type: cumulus
+        igp: ospf
+        egp: bgp
+
+cumulus24:
+    hostname: 192.168.100.124
+    platform: 'linux'
+    username: cumulus
+    password: mR7h0M@$
+    groups:
+        - cumulus_group
+    data:
+        router_type: cumulus
+        igp: ospf
+        egp: bgp
+
+cumulus31:
+    hostname: 192.168.100.131
+    platform: 'linux'
+    username: cumulus
+    password: mR7h0M@$
+    groups:
+        - cumulus_group
+    data:
+        router_type: cumulus
+        igp: ospf
+        egp: bgp

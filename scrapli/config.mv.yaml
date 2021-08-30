@@ -1,0 +1,11 @@
+---
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: "/home/tomw/nornir/scrapli/hosts.mv.yaml"
+        group_file: "/home/tomw/nornir/scrapli/groups.mv.yaml"
+        defaults_file: "home/tomw/nornir/scrapli/defaults.mv.yaml"
+runner:
+    plugin: threaded
+    options:
+        num_workers: 100
