@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-from jinja2 import FileSystemLoader, Environment
+from jinja2 import Template
 
-env = Environment(loader=FileSystemLoader('scrapli/templates/'))
+with open("./scrapli/templates/route.j2") as file_:
+    template = Template(file_.read())
 
 jinja_var = {
     'mpls':
@@ -21,5 +22,4 @@ jinja_var = {
     }]
 }
 
-template = env.get_template('route.j2')
 print(template.render(jinja_var))

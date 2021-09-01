@@ -1,24 +1,23 @@
-#jinja2:lstrip_blocks:True 
 <config>
     <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
       <router operation = "replace">
         <ospf xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
           <id>10</id>
           <router-id>5.5.5.5</router-id>
-{%- if mpls %}
+{% if mpls %}
           <mpls>
             <ldp>
               <autoconfig/>
             </ldp>
           </mpls>
-{%- endif %}
-{%- for scan in scan %}
+{% endif %}
+{% for scan in scan %}
           <network>
             <ip>{{ scan.ip_net }}</ip>
             <mask>{{ scan.wildcard_mask }}</mask>
             <area>{{ scan.area_id }}</area>
           </network>
-{%- endfor %}
+{% endfor %}
         </ospf>
       </router>
     </native>
