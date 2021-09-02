@@ -15,21 +15,8 @@ cumulus = nr.filter(F(groups__contains="cumulus_group"))
 
 def netconf_test(task):
     result = task.run(task=netconf_get,
-                      filter_="""
-    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
-        <interface>
-            <GigabitEthernet>
-                <name/>
-                <ip>
-                    <address>
-                        <primary>
-                        </primary>
-                    </address>
-                </ip>
-            </GigabitEthernet>
-        </interface>
-    </native>
-    """)
+                      filter_="/native/interface",
+                      filter_type="xpath")
 
 
 info = cisco.run(task=netconf_test)
