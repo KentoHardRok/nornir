@@ -3,5 +3,5 @@
 cisco_group:
     platform: 'ios'
 
-cumulus_group:
-    platform: 'linux'
+juniper_group:
+    platform: 'junos'

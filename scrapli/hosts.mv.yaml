@@ -47,50 +47,50 @@ CSR8:
         igp: ospf
         egp: bgp
 
-cumulus15:
+vMX15:
     hostname: 192.168.100.115
-    platform: 'linux'
-    username: cumulus
+    platform: 'junos'
+    username: tomw
     password: mR7h0M@$
     groups:
-        - cumulus_group
+        - juniper_group
     data:
-        router_type: cumulus
+        router_type: vMX
         igp: ospf
         egp: bgp
 
-cumulus16:
+vMX16:
     hostname: 192.168.100.116
-    platform: 'linux'
-    username: cumulus
+    platform: 'junos'
+    username: tomw
     password: mR7h0M@$
     groups:
-        - cumulus_group
+        - juniper_group
     data:
-        router_type: cumulus
+        router_type: vMX
         igp: ospf
         egp: bgp
 
-cumulus24:
+vMX24:
     hostname: 192.168.100.124
-    platform: 'linux'
-    username: cumulus
+    platform: 'junos'
+    username: tomw
     password: mR7h0M@$
     groups:
-        - cumulus_group
+        - juniper_group
     data:
-        router_type: cumulus
+        router_type: vMX
         igp: ospf
         egp: bgp
 
-cumulus31:
+vMX31:
     hostname: 192.168.100.131
-    platform: 'linux'
-    username: cumulus
+    platform: 'junos'
+    username: tomw
     password: mR7h0M@$
     groups:
-        - cumulus_group
+        - juniper_group
     data:
-        router_type: cumulus
+        router_type: vMX
         igp: ospf
         egp: bgp

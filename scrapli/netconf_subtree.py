@@ -55,5 +55,7 @@ def netconf_junos(task):
     """)
 
 
-info = juniper.run(task=netconf_junos)
-print_result(info)
+juniper_info = juniper.run(task=netconf_junos)
+cisco_info = cisco.run(task=netconf_iosxe)
+print_result(juniper_info)
+print_result(cisco_info)
