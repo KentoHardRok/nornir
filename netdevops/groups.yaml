@@ -1,0 +1,7 @@
+---
+
+cisco_group:
+    platform: 'ios'
+
+juniper_group:
+    platform: 'junos'

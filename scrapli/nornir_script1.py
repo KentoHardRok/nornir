@@ -10,7 +10,7 @@ from nornir import InitNornir
 
 nr = InitNornir(config_file="/home/tomw/nornir/scrapli/config.mv.yaml")
 cisco = nr.filter(F(groups__contains="cisco_group"))
-cumulus = nr.filter(F(groups__contains="cumulus_group"))
+junos = nr.filter(F(groups__contains="junos_group"))
 
 
 def netconf_test(task):
@@ -19,5 +19,5 @@ def netconf_test(task):
                       filter_type="xpath")
 
 
-info = cisco.run(task=netconf_test)
+info = junos.run(task=netconf_test)
 print_result(info)

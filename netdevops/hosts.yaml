@@ -8,7 +8,6 @@ CSR1:
     groups:
         - cisco_group
     data:
-        organization: provider
         router_type: csr
         igp: ospf
         egp: bgp
@@ -21,7 +20,6 @@ CSR2:
     groups:
         - cisco_group
     data:
-        organization: provider
         router_type: csr
         igp: ospf
         egp: bgp
@@ -34,7 +32,6 @@ CSR3:
     groups:
         - cisco_group
     data:
-        organization: provider
         router_type: csr
         igp: ospf
         egp: bgp
@@ -47,7 +44,6 @@ CSR4:
     groups:
         - cisco_group
     data:
-        organization: provider
         router_type: csr
         igp: ospf
         egp: bgp
@@ -60,7 +56,6 @@ CSR5:
     groups:
         - cisco_group
     data:
-        organization: provider
         router_type: csr
         igp: ospf
         egp: bgp
@@ -73,7 +68,6 @@ CSR6:
     groups:
         - cisco_group
     data:
-        organization: provider
         router_type: csr
         igp: ospf
         egp: bgp
@@ -87,7 +81,6 @@ vIOS7:
     groups:
         - cisco_group
     data:
-        organization: customer
         router_type: vios
         igp: ospf
         egp: bgp
@@ -100,7 +93,6 @@ vIOS8:
     groups:
         - cisco_group
     data:
-        organization: customer
         router_type: vios
         igp: ospf
         egp: bgp
@@ -113,7 +105,6 @@ vIOS9:
     groups:
         - cisco_group
     data:
-        organization: customer
         router_type: vios
         igp: ospf
         egp: bgp
@@ -126,7 +117,6 @@ vIOS10:
     groups:
         - cisco_group
     data:
-        organization: customer
         router_type: vios
         igp: ospf
         egp: bgp
@@ -140,7 +130,6 @@ vMX11:
     groups:
         - juniper_group
     data:
-        organization: customer
         router_type: vMX
         igp: ospf
         egp: bgp
@@ -153,7 +142,6 @@ vMX12:
     groups:
         - juniper_group
     data:
-        organization: customer
         router_type: vMX
         igp: ospf
         egp: bgp
@@ -166,7 +154,6 @@ vMX13:
     groups:
         - juniper_group
     data:
-        organization: customer
         router_type: vMX
         igp: ospf
         egp: bgp

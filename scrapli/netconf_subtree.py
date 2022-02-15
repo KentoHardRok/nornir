@@ -2,6 +2,7 @@
 Gather Specific Facts about the Network
 """
 
+from multiprocessing.connection import wait
 from nornir_utils.plugins.functions import print_result
 from nornir_scrapli.tasks import netconf_get, netconf_get_config, netconf_edit_config
 from nornir.core.filter import F
@@ -11,7 +12,7 @@ import xmltodict as x2d
 nr = InitNornir(config_file="/home/tomw/nornir/scrapli/config.mv.yaml")
 cisco = nr.filter(F(groups__contains="cisco_group"))
 juniper = nr.filter(F(groups__contains="juniper_group"))
-single_host = nr.filter(F(hostname='192.168.100.131'))
+single_host = nr.filter(F(hostname='192.168.100.111'))
 
 
 def netconf_iosxe(task):
@@ -86,13 +87,13 @@ def gorunteldat(task):
                       """)
 
 
-# juniper_info = juniper.run(task=netconf_junos)
+juniper_info = juniper.run(task=netconf_junos)
 # cisco_info = cisco.run(task=netconf_iosxe)
-edit = single_host.run(task=gorunteldat)
-config = single_host.run(task=try_get_config)
+#edit = single_host.run(task=gorunteldat)
+# config = single_host.run(task=try_get_config)
 
-print_result(edit)
-print_result(config)
+#print_result(edit)
+print_result(juniper_info)
 
 # this is how we extract ip information from the juniper devices
 # juniper_data = {}
