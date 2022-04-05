@@ -1,0 +1,11 @@
+---
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: "/home/tomw/nornir/jncip_lab/hosts.yaml"
+        group_file: "/home/tomw/nornir/jncip_lab/groups.yaml"
+        defaults_file: "/home/tomw/nornir/jncip_lab/defaults.yaml"
+runner:
+    plugin: threaded
+    options:
+        num_workers: 100
