@@ -1,0 +1,156 @@
+---
+R1: 
+    hostname: 192.168.100.101
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - area1
+    data:
+        router_type: pe
+        igp: ospf
+        egp: bgp
+
+R2: 
+    hostname: 192.168.100.102
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - area1
+    data:
+        router_type: pe
+        igp: ospf
+        egp: bgp
+
+R3: 
+    hostname: 192.168.100.103
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - area1
+    data:
+        router_type: p
+        igp: ospf
+        egp: bgp
+
+R4: 
+    hostname: 192.168.100.104
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - area1
+    data:
+        router_type: p
+        igp: ospf
+        egp: bgp
+
+R5: 
+    hostname: 192.168.100.105
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - area2
+    data:
+        router_type: p
+        igp: ospf
+        egp: bgp
+
+R6: 
+    hostname: 192.168.100.106
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - area2
+    data:
+        router_type: p
+        igp: ospf
+        egp: bgp
+
+R7: 
+    hostname: 192.168.100.107
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - area2
+    data:
+        router_type: pe
+        igp: ospf
+        egp: bgp
+
+R8: 
+    hostname: 192.168.100.108
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - area2
+    data:
+        router_type: pe
+        igp: ospf
+        egp: bgp
+
+R11: 
+    hostname: 192.168.100.111
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - green
+    data:
+        router_type: ce
+        igp: ospf
+        egp: bgp
+
+R12: 
+    hostname: 192.168.100.112
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - red
+    data:
+        router_type: ce
+        igp: ospf
+        egp: bgp
+
+R13: 
+    hostname: 192.168.100.113
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - blue
+    data:
+        router_type: ce
+        igp: ospf
+        egp: bgp
+
+R14: 
+    hostname: 192.168.100.114
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - blue
+    data:
+        router_type: ce
+        igp: ospf
+        egp: bgp
