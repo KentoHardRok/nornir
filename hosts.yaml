@@ -103,6 +103,32 @@ R8:
         igp: ospf
         egp: bgp
 
+R9: 
+    hostname: 192.168.100.109
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - black
+    data:
+        router_type: pe
+        igp: ospf
+        egp: bgp
+
+R10: 
+    hostname: 192.168.100.110
+    platform: 'ios'
+    username: tomw
+    password: mR7h0M@$
+    groups: 
+        - cisco_group
+        - red
+    data:
+        router_type: pe
+        igp: ospf
+        egp: bgp
+
 R11: 
     hostname: 192.168.100.111
     platform: 'ios'

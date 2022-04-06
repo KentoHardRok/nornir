@@ -2,24 +2,24 @@
 
 cisco_group:
     groups:
-        - black
-        - blue
+        - area1
+        - area2
         - green
         - red
-        - yellow
+        - blue
     platform: 'ios'
 
-black:
+area1:
     data:
         provider: true
         domain: py.local
-        asn: 65004
+        asn: 65001
 
-blue:
+area2:
     data: 
         provider: true
-        domain: py.blue
-        asn: 65002
+        domain: py.local
+        asn: 65001
 
 red:
     data:
@@ -31,10 +31,10 @@ green:
     data:
         provider: false
         domain: py.green
-        asn: 65001
+        asn: 65004
 
-yellow:
+blue:
     data:
         provider: false
-        domain: py.green
-        asn: 65005
+        domain: py.blue
+        asn: 65002

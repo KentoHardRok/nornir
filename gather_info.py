@@ -8,10 +8,11 @@ from nornir.core.filter import F
 from nornir import InitNornir
 # from xml.dom import minidom
 
-nr = InitNornir(config_file="/home/tomw/nornir/scrapli/config.mv.yaml")
-cisco = nr.filter(F(groups__contains="cisco_group"))
-cumulus = nr.filter(F(groups__contains="cumulus_group"))
+#nr = InitNornir(config_file="/home/tomw/nornir/scrapli/config.mv.yaml")
+#cisco = nr.filter(F(groups__contains="cisco_group"))
+#cumulus = nr.filter(F(groups__contains="cumulus_group"))
 
+nr = InitNornir(config_file="onfig.yaml")
 
 def netconf_test(task):
     result = task.run(task=netconf_get,
@@ -19,5 +20,5 @@ def netconf_test(task):
                       filter_type="xpath")
 
 
-info = cisco.run(task=netconf_test)
+info = nr.run(task=netconf_test)
 print_result(info)
