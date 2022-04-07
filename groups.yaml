@@ -6,7 +6,6 @@ cisco_group:
         - blue
         - green
         - red
-        - yellow
     platform: 'ios'
 
 black:

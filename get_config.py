@@ -12,7 +12,7 @@ import ipdb
 import os.path
 
 # initialize inventory
-nr = InitNornir(config_file="config.junos.yaml")
+nr = InitNornir(config_file="config.yaml")
 
 # pulls configs via napalm
 config = nr.run(task=napalm_get, getters="config")

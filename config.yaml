@@ -4,7 +4,7 @@ inventory:
     options:
         host_file: "/home/tomw/nornir/hosts.yaml"
         group_file: "/home/tomw/nornir/groups.yaml"
-        defaults_file: "home/tomw/nornir/defaults/yaml"
+        defaults_file: "home/tomw/nornir/defaults.yaml"
 runner:
     plugin: threaded
     options:

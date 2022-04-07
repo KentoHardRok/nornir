@@ -2,7 +2,7 @@
 Gather Specific Facts about the Network
 """
 
-from nornir_utils.plugins.functions import print_result
+from nornir_utils.plugins.functions import print_result 
 from nornir_scrapli.tasks import netconf_get
 from nornir.core.filter import F
 from nornir import InitNornir
@@ -12,7 +12,7 @@ from nornir import InitNornir
 #cisco = nr.filter(F(groups__contains="cisco_group"))
 #cumulus = nr.filter(F(groups__contains="cumulus_group"))
 
-nr = InitNornir(config_file="onfig.yaml")
+nr = InitNornir(config_file="/home/tomw/nornir/config.yaml")
 
 def netconf_test(task):
     result = task.run(task=netconf_get,
